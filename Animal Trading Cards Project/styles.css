@@ -1,0 +1,57 @@
+/* add your CSS here */
+
+body {
+        font-family: serif;
+        font-size: 13px;
+}
+li span {
+
+        font-weight: bold;
+        
+
+        }
+
+.interesting {
+        font-style: italic; 
+}
+
+ul {
+        list-style-type: none;
+        padding: 1em;
+}
+
+.content {
+        margin: auto;
+        width: auto;
+        height: 95%;
+        border: 1px solid coral;
+        box-sizing: border-box;
+        padding: 1em;
+
+        margin: 0.5em;
+}
+
+img {
+        border: 1px solid coral;
+        display: block;
+        justify-content: center;
+        padding: 0.5em;
+        margin: auto;
+        width: 91.7%;
+ 
+
+}
+
+.poster {
+    display: grid;
+    margin: auto;
+
+    width: 360px;
+    height: 100%;
+    border: 1px solid rgb(199, 196, 196);
+    box-sizing: border-box;
+    padding: 0.5em;
+
+    justify-content: center;
+    
+}
