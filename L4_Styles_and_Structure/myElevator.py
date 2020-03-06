@@ -8,8 +8,10 @@ def print_greeting1(number):
     time.sleep(1)
 def print_greeting2(place):
     print_pause("After a few moments, you find yourself in the "+place+".")
-    print_pause("Where would you like to go next?")
-    
+    #print_pause("Where would you like to go next?")
+
+# start! 
+items = []
 print_pause("You have just arrived at your new job!")
 print_pause("You are in the elevator.") 
 
@@ -21,10 +23,42 @@ while True:
     if floor == 1:
         print_greeting1("first")
         print_greeting2("lobby")
+        if "ID card" in items:
+            print_pause("The clerk greets you, but he has already given you the ID card, "\
+                "so there is nothing more to do here now.")
+        else:
+            print_pause("The clerk greets you and gives you your ID card.")
+            items.append("ID card") 
+
     elif floor ==2:
         print_greeting1("second")
         print_greeting2("human resources department")
-    else:
+        if "handbook" in items:
+            print_puase("The HR folks are busy at their desks."\
+                "There doesnt' seem to be much to do here.")
+        else:
+            print_pause("The head of HR greets you.")
+            if "ID card" in items:
+                print_pause("He looks at your ID card and then gives you a copy of the employee handbook.")
+                items.append("handbook")
+            else:
+                print_pause("He has something for you, but says he can't give it  you until you go get your ID card.")
+            
+    elif floor ==3:
         print_greeting1("third")
         print_greeting2("engineering department")
-         
+        if 'ID card' in items:
+            print_pause("You use your ID card to open the door.")
+            print_pause("Your program manager greets you and tells you that you need to have a copy of the employee handgboook"\
+                "in order to start work.")
+            if 'handbook' in items:
+                print_pause("Fortunately, you got that from HR!")
+                print_pause("Congratulations! You are ready to start your new job as vice president of engineering!")
+            else:
+                print_pause("They scowl  when they see that you don't have it, and send you back to the elevator.")
+        else:
+            print_pause("Unfortunately, the door is locked and you can't get in.")
+            print_pause("It looks like you need some kind of key card to open the door.")
+            print_pause("You head back to the elevator.")
+        
+        
