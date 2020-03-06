@@ -17,9 +17,9 @@ print_pause("You are in the elevator.")
 
 while True:
     print_pause("Please enter the number for the floor you would like to visit:")
-    floor = int(input("1. Lobby\n"
+    floor = int(float(input("1. Lobby\n"
                      "2. Human resources\n"
-                     "3. Engineering department\n"))
+                     "3. Engineering department\n")))
     if floor == 1:
         print_greeting1("first")
         print_greeting2("lobby")
@@ -54,6 +54,7 @@ while True:
             if 'handbook' in items:
                 print_pause("Fortunately, you got that from HR!")
                 print_pause("Congratulations! You are ready to start your new job as vice president of engineering!")
+                break
             else:
                 print_pause("They scowl  when they see that you don't have it, and send you back to the elevator.")
         else:
