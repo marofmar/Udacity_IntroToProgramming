@@ -123,8 +123,8 @@ def draw_monster():
 
 
 def draw_round():
-    prob_win = draw_weapon()
-    prob_lose = draw_monster()
+    prob_win = int(draw_weapon())
+    prob_lose = int(draw_monster())
     if prob_win > prob_lose:
         print_pause("Ok, you won the monster!")
         print_pause("Congratulations!\n\n")
