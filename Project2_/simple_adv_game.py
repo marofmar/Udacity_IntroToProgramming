@@ -97,7 +97,7 @@ def draw_weapon():
     print_pause("Satisfied with this result?")
     print_pause("===============================================\n"
                 "\tEnter 1 to draw again.\n"
-                "\tEnter 2 to move on.\n"
+                "\tEnter 2 to mov   e on.\n"
                 "================================================")
     choice = choose(["1", "2"])
     if choice == "1":
