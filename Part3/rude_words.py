@@ -1,4 +1,6 @@
 # rude words detector v0.2
+import string
+
 
 rude_words = ['idiot', 'butt', 'devil', 'heck', 'jerk', 'crap', 'darn']
 
@@ -6,6 +8,8 @@ def check_line(line):
     rude_count = 0 
     words = line.split(" ")  # list of words 
     for word in words:
+        word = word.strip(string.punctuation)
+        word = word.lower()
         if word in rude_words:
             rude_count += 1
             print(f"Foudn rude word: {word}")
